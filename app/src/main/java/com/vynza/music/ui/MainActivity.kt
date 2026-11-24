@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
+import com.vynza.music.R
 import com.vynza.music.data.api.ApiClient
 import com.vynza.music.data.model.Song
 import kotlinx.coroutines.launch
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         initPlayer()
         fetchMusicCatalog()
     }
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
             } catch (e: Exception) {
-                // Network or connection error handling
                 e.printStackTrace()
             }
         }
