@@ -26,20 +26,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
       - name: Install official Gradle Wrapper
         run: |
           gradle wrapper --gradle-version 8.4
-
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x gradlew
+          chmod +x gradlew
 
       - name: Build Android APK
+        env:
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
         run: |
           ./gradlew assembleDebug --stacktrace --no-daemon
 
