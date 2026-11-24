@@ -42,6 +42,14 @@ AndroidApp/
 
 *The structure may evolve during development.*
 
+## 📥 Download Official APK
+
+Download the latest version of VYNZA Android App directly from GitHub Releases:
+
+[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0.0-purple?style=for-the-badge&logo=android)](https://github.com/Vynza/AndroidApp/releases/download/v1.0.0/vynza-music-app-v1.0.0.apk)
+
+- **Release Page**: [GitHub Releases v1.0.0](https://github.com/Vynza/AndroidApp/releases/tag/v1.0.0)
+
 ## ⚙️ Getting Started
 
 1. Install Android Studio.
