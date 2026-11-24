@@ -35,10 +35,8 @@ jobs:
           chmod +x gradlew
 
       - name: Build Android APK
-        env:
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
         run: |
-          ./gradlew assembleDebug --stacktrace --no-daemon
+          ./gradlew assembleDebug --info > build.log 2>&1 || (tail -n 100 build.log && exit 1)
 
       - name: Prepare APK for Release
         run: |
